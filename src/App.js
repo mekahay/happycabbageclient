@@ -1,13 +1,14 @@
 import './App.css';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Route, Switch, Link} from 'react-router-dom';
-import { Nav, Navbar, Form, NavDropdown, Button } from 'react-bootstrap';
+import { Nav, Navbar, Form, NavDropdown, Button, FormControl } from 'react-bootstrap';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <h1>INSTA-INSPIRE</h1>
+      <h1>Happy Cabbage</h1>
       <div className='nav-routes'/>
     
     <Navbar bg="light" expand="lg">
@@ -25,6 +26,7 @@ function App() {
         <Nav.Link href='/customgiftsform'> Custom</Nav.Link>
         <Nav.Link href='/corporategiftsform'>Corporate</Nav.Link>
         <Nav.Link href='/thecabbagepatch'>The Cabbage Patch</Nav.Link>
+        <Nav.Link href='/admin'>Admin</Nav.Link>
       </Nav>
       <Form inline>
         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -40,15 +42,21 @@ function App() {
         <Router>
         <Switch>
           <Route path='/' exact component={Home} />
+          <Route path='/giftseditdelete' component={GiftsEditDelete} />
+          <Route path='/giftsform' component={giftsform} />
           <Route path='/shopallgifts' component={shopallgifts} />
-          <Route path='/wellness' component={wellness} />
-          <Route path='/gestures' component={gestures} />
-          <Route path='/childrensgifts' component={childrensgifts} />
-          <Route path='/newbaby' component={newbaby} />
-          <Route path='/smallgifts' component={smallgifts} />
+          <Route path='/wellnessshow' component={wellnessshow} />
+          <Route path='/gesturesshow' component={gesturesshow} />
+          <Route path='/childrensgiftsshow' component={childrensgiftsshow} />
+          <Route path='/newbabyshow' component={newbabyshow} />
+          <Route path='/smallgiftsshow' component={smallgiftsshow} />
           <Route path='/customgiftsform' component={customgiftsform} />
+          <Route path='/customgiftsshow' component={customgiftsshow} />
           <Route path='/corporategiftsform' component={corporategiftsform} />
-          <Route path='/thecabbagepatch' component={thecabbagepatch} />
+          <Route path='/corporategiftsshow' component={corporategiftsshow} />
+          <Route path='/thecabbagepatchshow' component={thecabbagepatchshow} />
+          <Route path='/thecabbagepatchcreate' component={thecabbagepatchcreate} />
+          <Route path='/thecabbagepatcheditdelete' component={thecabbagepatcheditdelete} />
         </Switch>
         </Router>
       </header>
