@@ -2,6 +2,8 @@ import './App.css';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Route, Switch, Link} from 'react-router-dom';
 import { Nav, Navbar, Form, NavDropdown, Button, FormControl } from 'react-bootstrap';
+import CorporateGiftForm from './Components/CorporateGifts/CorportateGiftsForm';
+import CustomGiftsForm from './Components/CustomGifts/CustomGiftsForm';
 
 
 function App() {
@@ -41,22 +43,22 @@ function App() {
 
         <Router>
         <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/giftseditdelete' component={GiftsEditDelete} />
+          {/* <Route path='/' exact component={Home} /> */}
+          {/* <Route path='/giftseditdelete' component={GiftsEditDelete} />
           <Route path='/giftsform' component={giftsform} />
           <Route path='/shopallgifts' component={shopallgifts} />
           <Route path='/wellnessshow' component={wellnessshow} />
           <Route path='/gesturesshow' component={gesturesshow} />
           <Route path='/childrensgiftsshow' component={childrensgiftsshow} />
           <Route path='/newbabyshow' component={newbabyshow} />
-          <Route path='/smallgiftsshow' component={smallgiftsshow} />
-          <Route path='/customgiftsform' component={customgiftsform} />
-          <Route path='/customgiftsshow' component={customgiftsshow} />
-          <Route path='/corporategiftsform' component={corporategiftsform} />
-          <Route path='/corporategiftsshow' component={corporategiftsshow} />
+          <Route path='/smallgiftsshow' component={smallgiftsshow} /> */}
+          <Route path='/customgiftsform' component={CustomGiftsForm} />
+          {/* <Route path='/customgiftsshow' component={customgiftsshow} /> */}
+          <Route path='/corporategiftsform' component={CorporateGiftForm} />
+          {/* <Route path='/corporategiftsshow' component={corporategiftsshow} />
           <Route path='/thecabbagepatchshow' component={thecabbagepatchshow} />
           <Route path='/thecabbagepatchcreate' component={thecabbagepatchcreate} />
-          <Route path='/thecabbagepatcheditdelete' component={thecabbagepatcheditdelete} />
+          <Route path='/thecabbagepatcheditdelete' component={thecabbagepatcheditdelete} /> */}
         </Switch>
         </Router>
       </header>
