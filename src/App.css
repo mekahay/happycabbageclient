@@ -1,38 +1,64 @@
+@import url("https://use.typekit.net/bjf3dnt.css");
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  padding: 65px;
+  border: 10px;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  font-family: baskerville-display-pt, serif;
+  font-weight: 400;
+  color: gray;
+}
+
+.Header{
+  width: 40%;
+  height: auto;
+}
+.nav-routes{
+  font-size: 15px;
+}
+.footer{
+  font-size: 12px;
+}
+.Home{
+  position: relative;
+}
+.Home-img {
+  max-width: 75%;
+  height: auto;
+}
+h2{
+  font-size: 40px;
+  font-weight: 250;
+}
+.Home-div{
+  width: 50%;
+  height: auto;
+  background-color: #A2885C ;
   color: white;
+  position: absolute;
+  padding: 10px;
+  top: 75px;
+  right: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+p{
+font-family: proxima-nova, sans-serif;
+font-size: medium;
+font-weight: 300;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.productForm_form{
+font-family: proxima-nova, sans-serif;
+font-size: small;
+}
+
+.githeader{
+  text-align: Left;
 }
