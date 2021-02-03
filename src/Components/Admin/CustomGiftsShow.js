@@ -6,7 +6,7 @@ function CustomGiftShow(props) {
 
     const fetchCustomsGiftResponse = async () => {
         try {
-            const response = await fetch('http://localhost:3000/customs');
+            const response = await fetch('https://happycabbagegifts.herokuapp.com/customs');
             const json = await response.json();
             setCustoms(json);
         } catch (error) {
@@ -35,7 +35,7 @@ function CustomGiftShow(props) {
                                     <Card.Text>Last Name: {custom.last_name} </Card.Text>
                                     <Card.Text>Subject: {custom.subject} </Card.Text>
                                     <Card.Text>Message: {custom.message}</Card.Text> 
-                                    <Card.Text>Price Range: {custom.price_range}</Card.Text>
+                                    <Card.Text>Price Range: ${custom.price_range} per gift</Card.Text>
                                     <Card.Text>Delivery Date: {custom.delivery_date}</Card.Text>                              
                                 </Card>  
                             </CardDeck>

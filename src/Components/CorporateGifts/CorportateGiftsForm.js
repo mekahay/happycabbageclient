@@ -24,7 +24,7 @@ const CorporateGiftForm = (props) => {
         })
         event.currentTarget.reset()
         try {
-            const response = await fetch('http://localhost:3000/corporates', {
+            const response = await fetch('https://happycabbagegifts.herokuapp.com/corporates', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: body
@@ -69,10 +69,10 @@ const CorporateGiftForm = (props) => {
             </Form.Row>
             <Form.Row>
                 <Form.Group as={Col} controlId="customFormGirdCorMessage">
-                    <Form.Control type="message" ref={messageInput} placeholder="Message"/>
+                    <Form.Control type="message" ref={messageInput} placeholder="Message" as="textarea" rows={5}/>
                 </Form.Group>
             </Form.Row>
-            <Button type='submit' value = 'SUBMIT'>Submit</Button>
+            <Button variant="outline-dark" type='submit' value = 'SUBMIT'>Submit</Button>
         </Form>
 
         </>

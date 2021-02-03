@@ -30,7 +30,7 @@ const CustomGiftsForm = (props) => {
         })
 
         try {
-            const response = await fetch('http://localhost:3000/customs', {
+            const response = await fetch('https://happycabbagegifts.herokuapp.com/customs', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: body,
@@ -64,7 +64,7 @@ const CustomGiftsForm = (props) => {
             </Form.Row>
             <Form.Row>
                 <Form.Group as={Col} controlId="customFormGirdMessage">
-                    <Form.Control type="message" ref={messageInput} placeholder="Message"/>
+                    <Form.Control type="message" ref={messageInput} placeholder="Message" as='textarea' rows={3}/>
                 </Form.Group>
             </Form.Row>
             <Form.Row>
@@ -72,10 +72,10 @@ const CustomGiftsForm = (props) => {
                     <Form.Control type="price" ref={priceRangeInput} placeholder="Maximum Price Per Gift"/>
                 </Form.Group>
                 <Form.Group as={Col} controlId="customFormGirdDeliveryDate">
-                    <Form.Control type="deliverydate" ref={deliveryDateInput} placeholder="Delivery Date yyyy/mm//dd"/>
+                    <Form.Control type="date" ref={deliveryDateInput} placeholder="Delivery Date yyyy/mm//dd"/>
                 </Form.Group>
             </Form.Row>
-            <Button type='submit' value = 'SUBMIT'>Submit</Button>
+            <Button variant="outline-dark" type='submit' value = 'SUBMIT'>Submit</Button>
         </Form>
         </>
     )

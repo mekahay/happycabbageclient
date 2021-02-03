@@ -1,5 +1,5 @@
 import { React, useRef } from 'react';
-import { Form, Col } from 'react-bootstrap';
+import { Form, Col, Button } from 'react-bootstrap';
 
 
 const ProductForm = (props) => {
@@ -31,12 +31,12 @@ const ProductForm = (props) => {
         })
         event.currentTarget.reset()
         try {
-            const response = await fetch('http://localhost:3000/products', {
+            const response = await fetch('https://happycabbagegifts.herokuapp.com/products', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: body
             })
-            props.history.push('/productsalladmin')
+            props.history.push('/productsall')
         } catch (error) {
             console.error(error)
         }
@@ -55,15 +55,15 @@ const ProductForm = (props) => {
                 </Form.Group>
             </Form.Row>
             <Form.Group controlId="formGridDescription">
-                <Form.Control type="Description" ref={descriptionInput} placeholder="Description" rows={10}/>
+                <Form.Control type="Description" ref={descriptionInput} placeholder="Description" as='textarea' rows={5}/>
             </Form.Group>
             <Form.Group >
-                <Form.File id="exampleFormControlPicture1" ref={picture1Input} label="Add images" />
-                <Form.File id="exampleFormControlPicture2" ref={picture2Input}/>
-                <Form.File id="exampleFormControlPicture3" ref={picture3Input}/>
-                <Form.File id="exampleFormControlPicture4" ref={picture4Input}/>
+                <Form.Control id="productFormPicture1" ref={picture1Input} placeholder="Image 1" />
+                <Form.Control id="productFormPicture2" ref={picture2Input} placeholder="Image 2" />
+                <Form.Control id="productFormPicture3" ref={picture3Input} placeholder="Image 3" />
+                <Form.Control id="productFormPicture4" ref={picture4Input} placeholder="Image 4" />
             </Form.Group>
-            <input type='submit' value = 'SUBMIT'></input>
+            <Button variant="outline-dark" type='submit' value = 'SUBMIT'>Submit</Button>
         </Form>
         </>
     )

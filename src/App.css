@@ -1,5 +1,4 @@
 @import url("https://use.typekit.net/bjf3dnt.css");
-
 .App {
   text-align: center;
   padding: 65px;
@@ -14,6 +13,9 @@
   font-family: baskerville-display-pt, serif;
   font-weight: 400;
   color: gray;
+}
+body {
+  margin: 20px;
 }
 
 .Header{
@@ -54,11 +56,8 @@ font-size: medium;
 font-weight: 300;
 }
 
-.productForm_form{
-font-family: proxima-nova, sans-serif;
-font-size: small;
-}
-
-.githeader{
-  text-align: Left;
+.footermadeby{
+  font-family: hwt-mardell, sans-serif;
+  font-weight: 400;
+  color: gray;
 }
